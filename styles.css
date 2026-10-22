@@ -22,8 +22,17 @@ html {
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: var(--bg);
   color: var(--text);
+  background-color: #0f0f10;
+ 
+
+  /* fixed background image, 1920x1080-style crop */
+  background-image:
+    url("https://github.com/PalmettoPeril/Benji-DeMay-Portfolio/blob/main/sketchbg.png?raw=true");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 img {
@@ -47,25 +56,91 @@ button {
 }
 
 .sidebar {
-  background: var(--sidebar);
-  color: var(--sidebar-text);
-  padding: 2rem 1.5rem;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-right: 1px solid rgba(61, 35, 22, 0.15);
+  color: #3d2316;
+
+  padding-top: 2.25rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .avatar-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.mobile-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.nav-toggle {
+  position: absolute;
+  right: 0;
+}
+
+.brand-block {
+  text-align: left;
+  margin-top: 1.1rem;
+  margin-left: 0.2rem;
+}
+
+.nav {
+  margin-top: 1.5rem;
+  padding-left: 0.2rem;
+}
+
+.sidebar-meta {
+  margin-top: 2rem;
+  padding-left: 0.2rem;
+  border-top: 1px solid rgba(61, 35, 22, 0.12);
+}
+
+.brand-block h1,
+.brand-block p,
+.nav a,
+.sidebar-meta,
+.sidebar-meta a {
+  color: #3d2316;
+}
+
+.brand-block p {
+  opacity: 0.8;
+}
+
+.nav a {
+  color: #3d2316;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: rgba(61, 35, 22, 0.08);
+  color: #3d2316;
+}
+
+.sidebar-meta a {
+  color: #3d2316;
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f2c3a4, #d5785f);
   color: #1b1414;
@@ -95,7 +170,7 @@ button {
 
 .brand-block p {
   margin: 0.45rem 0 0;
-  color: rgba(247, 243, 239, 0.77);
+  color: #3d2316;
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -111,7 +186,7 @@ button {
 .nav a {
   padding: 0.75rem 0.9rem;
   border-radius: 12px;
-  color: rgba(247, 243, 239, 0.9);
+  color: #3d2316;
   font-weight: 500;
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -126,7 +201,7 @@ button {
   margin-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.2rem;
-  color: rgba(247, 243, 239, 0.8);
+  color: #3d2316;
   font-size: 0.9rem;
 }
 
@@ -208,6 +283,47 @@ button {
   font-size: 1.05rem;
   line-height: 1.7;
 }
+.hero-copy,
+.page-intro,
+.section-heading,
+.gallery-card,
+.about-grid > div,
+.card-caption {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(61, 35, 22, 0.08);
+}
+
+.hero-copy {
+  padding: 1.5rem 1.75rem;
+  border-radius: 24px;
+}
+
+.page-intro {
+  padding: 1.25rem 1.5rem;
+  border-radius: 22px;
+}
+
+.section-heading {
+  padding: 0.75rem 1rem;
+  border-radius: 18px;
+  display: inline-block;
+}
+
+.gallery-card {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.card-caption {
+  border-top: 1px solid rgba(61, 35, 22, 0.08);
+  border-radius: 0;
+}
+
+.about-grid > div {
+  border-radius: 20px;
+  padding: 1.3rem;
+}
 
 .cta-row {
   display: flex;
@@ -236,7 +352,7 @@ button {
 }
 
 .button.secondary {
-  background: rgba(29, 27, 26, 0.05);
+  background: rgba(255, 245, 241, 0.05);
   color: var(--text);
 }
 
@@ -386,6 +502,57 @@ button {
   .content {
     padding-top: 1rem;
   }
+  .content {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+}
+
+.hero-copy,
+.page-intro,
+.section-heading,
+.gallery-card,
+.about-grid > div,
+.card-caption {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(61, 35, 22, 0.08);
+}
+
+.hero-copy {
+  padding: 1.5rem 1.75rem;
+  border-radius: 24px;
+}
+
+.page-intro {
+  padding: 1.25rem 1.5rem;
+  border-radius: 22px;
+}
+
+.section-heading {
+  padding: 0.75rem 1rem;
+  border-radius: 18px;
+  display: inline-block;
+}
+
+.gallery-card {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.gallery-card img {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card-caption {
+  border-top: 1px solid rgba(61, 35, 22, 0.08);
+  border-radius: 0;
+}
+
+.about-grid > div {
+  border-radius: 20px;
+  padding: 1.3rem;
+}
+
 
   .gallery-grid,
   .about-grid {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avery Rowan | About</title>
+    <title>Benji DeMay | About</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,8 +20,8 @@
         </div>
 
         <div class="brand-block">
-          <h1>Avery Rowan</h1>
-          <p>Artist • Animator • Storyteller</p>
+          <h1>Benji DeMay</h1>
+          <p>Animator • Illustrator • Storyboard Artist</p>
         </div>
 
         <nav class="nav" aria-label="Main navigation">
@@ -32,46 +32,59 @@
           <a href="storyboards.html">Storyboards</a>
         </nav>
 
-        <div class="sidebar-meta">
-          <p>Based in Portland, OR</p>
-          <a href="mailto:avery@example.com">avery@example.com</a>
+           <div class="sidebar-meta">
+        
+         <center> <a href="mailto:benjidemay@gmail.com">benjidemay@gmail.com</a></center>
         </div>
       </aside>
 
       <main class="content">
-        <header class="mobile-header">
-          <div class="mobile-brand">
-            <div class="avatar small">AR</div>
-            <div>
-              <strong>Avery Rowan</strong>
-            </div>
-          </div>
-          <button class="nav-toggle" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </header>
+    <header class="mobile-header">
+  <button class="nav-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
 
         <section class="hero">
-          <div class="hero-copy">
+          <div class="hero-copy"> 
+            
             <p class="eyebrow">About</p>
-            <h2>Creating expressive worlds through illustration, motion, and character.</h2>
+            <h2>Animator and Illustrator with a love for the ocean and creepy crawlies.</h2>
             <p>
-              I’m an artist focused on visual storytelling across animation, concept
-              art, and editorial illustration. My work blends emotional character work
-              with bold, cinematic composition.
+              Yo! My name's Benji and I'm an artist focused on creating both illustration and hybridized 2D and 3D narrative animated work.
             </p>
             <div class="cta-row">
-              <a class="button primary" href="illustration.html">View Portfolio</a>
-              <a class="button secondary" href="mailto:avery@example.com">Contact</a>
+              <a class="button primary" href="animation.html">View Reel</a>
+              <a class="button secondary" href="mailto:benjidemay@gmail.com">Email</a>
             </div>
+            
           </div>
 
           <div class="hero-image">
+            
             <img
               src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
-              alt="Artist portfolio hero"
+              alt="Artist portfolio hero" @media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .hero-image {
+    order: 2;
+  }
+
+  .hero-image img {
+    height: 260px;
+  }
+}
             />
           </div>
         </section>
