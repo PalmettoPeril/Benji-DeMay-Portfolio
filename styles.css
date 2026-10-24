@@ -458,6 +458,10 @@ button {
   object-position: top center;
 }
 
+.gallery-card.kappacomic img {
+  object-position: bottom center;
+}
+
 .gallery-card img {
   width: 100%;
   height: 280px;
