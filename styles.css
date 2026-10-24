@@ -2,14 +2,15 @@
   --bg: #f7f3ef;
   --panel: #f2e9e0;
   --sidebar: #1f1a1a;
-  --sidebar-text: #f7f3ef;
+  --sidebar-text:#1f1a1a;
   --muted: #726763;
-  --text: #1d1b1a;
+  --text: hwb(21 2% 87%);
   --card-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   --border: rgba(29, 27, 26, 0.08);
   --accent: #d5785f;
-  --accent-soft: #eed6cb;
+  --accent-soft: #1f1a1a;
 }
+
 
 * {
   box-sizing: border-box;
@@ -53,6 +54,17 @@ button {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   min-height: 100vh;
+}
+.sidebar-meta a,
+.nav a,
+.brand-block a {
+  color: #1b1414;
+}
+
+.sidebar-meta a:hover,
+.nav a:hover,
+.brand-block a:hover {
+  color: #bade1a;
 }
 
 .sidebar {
@@ -210,7 +222,7 @@ button {
 }
 
 .sidebar-meta a {
-  color: #f7d5c6;
+  color: #3d2316;
 }
 
 .content {
@@ -218,10 +230,45 @@ button {
 }
 
 .mobile-header {
+  display: block;
+  padding: 1rem 0 1.2rem;
+  text-align: center;
+}
+
+.mobile-header .avatar-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(61, 35, 22, 0.12);
+  border-radius: 18px;
+  padding: 0.75rem;
+}
+
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  color: #1f1a1a;
+  border-radius: 12px;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  background: rgba(61, 35, 22, 0.08);
+}
+
+.nav-toggle {
   display: none;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 0 1.2rem;
 }
 
 .mobile-brand {
