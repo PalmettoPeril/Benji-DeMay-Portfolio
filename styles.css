@@ -859,4 +859,50 @@ body {
   font-size: 0.9rem !important;
   font-weight: 600 !important;
   cursor: pointer !important;
+  
+}
+ .storyboard-page .storyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.storyboard-page .storyboard-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(61, 35, 22, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.storyboard-page .storyboard-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.storyboard-page .storyboard-trigger img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.storyboard-page .storyboard-meta {
+  background: rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(61, 35, 22, 0.08);
+  padding: 0.9rem 1rem 1rem;
+}
+
+.storyboard-page .storyboard-meta h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f1a1a;
+  line-height: 1.4;
 }
