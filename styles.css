@@ -315,7 +315,9 @@ button {
   font-size: 0.75rem;
   font-weight: 700;
 }
-
+.hero-copy .intro-text {
+  color: rgba(61, 35, 22, 0.08);
+}
 .hero-copy h2,
 .page-intro h2 {
   margin: 0;
@@ -324,11 +326,14 @@ button {
   letter-spacing: -0.06em;
 }
 
-.hero-copy p:not(.eyebrow) {
+.hero-copy p.intro-text {
+  color: color: #2b1509 !important;
+
   margin-top: 1rem;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.7;
+
 }
 .hero-copy,
 .page-intro,
@@ -529,8 +534,28 @@ button {
   }
 
   .mobile-header {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .mobile-header {
     display: flex;
   }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
+@media (min-width: 981px) {
+  .mobile-header,
+  .nav-toggle {
+    display: none !important;
+  }
+}
 
   .hero {
     grid-template-columns: 1fr;
@@ -553,6 +578,7 @@ button {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 0;
 }
+
 
 .hero-copy,
 .page-intro,
@@ -626,6 +652,65 @@ button {
   height: 100%;
   overflow: hidden;
 }
+.gallery-card a {
+  display: block;
+  cursor: pointer;
+}
+
+.gallery-card img {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery-card a:hover img {
+  transform: scale(1.01);
+  opacity: 0.96;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: min(92vw, 1200px);
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (min-width: 981px) {
+  .mobile-header,
+  .mobile-brand,
+  .nav-toggle {
+    display: none !important;
+  }
+}
 
 .video-link {
   position: relative;
@@ -696,5 +781,12 @@ button {
 
   .video-row > .gallery-card {
     margin-bottom: 1.2rem;
+  }
+}
+@media (min-width: 981px) {
+  .mobile-header,
+  .mobile-brand,
+  .nav-toggle {
+    display: none !important;
   }
 }
