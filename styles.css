@@ -64,7 +64,7 @@ button {
 .sidebar-meta a:hover,
 .nav a:hover,
 .brand-block a:hover {
-  color: #bade1a;
+  color: #dac663;
 }
 
 .sidebar {
@@ -316,7 +316,7 @@ button {
   font-weight: 700;
 }
 .hero-copy .intro-text {
-  color: rgba(61, 35, 22, 0.08);
+  color: rgba(44, 23, 13, 0.08);
 }
 .hero-copy h2,
 .page-intro h2 {
@@ -327,7 +327,7 @@ button {
 }
 
 .hero-copy p.intro-text {
-  color: color: #2b1509 !important;
+  color: #2b1509 !important;
 
   margin-top: 1rem;
   color: var(--muted);
