@@ -43,11 +43,13 @@
 
 <main class="content">
   <header class="mobile-header">
-    <button class="nav-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+   <header class="mobile-header">
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
   </header>
 
   <section class="page-intro">
@@ -140,5 +142,19 @@
       </div>
     </article>
   </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navToggle = document.querySelector(".nav-toggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (!navToggle || !sidebar) return;
+
+    navToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      const isOpen = sidebar.classList.contains("open");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+</script>
 </main>
 </html>
