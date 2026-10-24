@@ -29,14 +29,21 @@ body {
 
   /* fixed background image, 1920x1080-style crop */
   background-image:
-    url("https://github.com/PalmettoPeril/Benji-DeMay-Portfolio/blob/main/sketchbg.png?raw=true");
+    url("https://github.com/PalmettoPeril/Benji-DeMay-Portfolio/blob/main/sketchbg.webp?raw=true");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-
-
+@media (max-width: 980px) {
+  body {
+    background-image: url("https://github.com/PalmettoPeril/Benji-DeMay-Portfolio/blob/main/sketchbg_mobile.webp?raw=true");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
 img {
   max-width: 100%;
   display: block;
