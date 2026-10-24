@@ -33,80 +33,163 @@
         </nav>
 
         <div class="sidebar-meta">
-        
-         <center> <a href="https://www.youtube.com/@palmettoperil6049">Youtube</a></center>
-         <center> <a href="https://www.linkedin.com/in/benji-demay-235401294/">LinkedIn</a></center>
-         <center> <a href="https://www.instagram.com/palmettoperil/?hl=en">Instagram</a></center>
-         <center> <a href="mailto:benjidemay@gmail.com">Email</a></center>
+          <center><a href="https://www.youtube.com/@palmettoperil6049">Youtube</a></center>
+          <center><a href="https://www.linkedin.com/in/benji-demay-235401294/">LinkedIn</a></center>
+          <center><a href="https://www.instagram.com/palmettoperil/?hl=en">Instagram</a></center>
+          <center><a href="mailto:benjidemay@gmail.com">Email</a></center>
         </div>
       </aside>
 
-      <main class="content">
-       <header class="mobile-header">
-  <button class="nav-toggle" aria-label="Open menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</header>
+      <main class="content storyboard-page">
+        <header class="mobile-header">
+          <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </header>
 
         <section class="page-intro">
-          <p class="eyebrow">Storyboards</p>
-          <h2>Sequencing beats, pacing, and scene flow.</h2>
+          <h2>Storyboards</h2>
         </section>
 
-        <section class="gallery-grid portfolio">
-          <article class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Storyboard 1" />
-            <div class="card-caption">
-              <h4>City Chase</h4>
-              <span>Beat board</span>
+        <section class="storyboard-grid">
+          <article class="storyboard-card" data-images="storyboard-1a.jpg|storyboard-1b.jpg|storyboard-1c.jpg">
+            <button class="storyboard-trigger" type="button">
+              <img src="storyboard-1a.jpg" alt="Storyboard sequence 1" />
+            </button>
+            <div class="storyboard-meta">
+              <h3>Sequence 01</h3>
+              <p>Opening beat</p>
             </div>
           </article>
 
-          <article class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80" alt="Storyboard 2" />
-            <div class="card-caption">
-              <h4>Chasing Lights</h4>
-              <span>Sequence study</span>
+          <article class="storyboard-card" data-images="storyboard-2a.jpg|storyboard-2b.jpg|storyboard-2c.jpg|storyboard-2d.jpg">
+            <button class="storyboard-trigger" type="button">
+              <img src="storyboard-2a.jpg" alt="Storyboard sequence 2" />
+            </button>
+            <div class="storyboard-meta">
+              <h3>Sequence 02</h3>
+              <p>Action pacing</p>
             </div>
           </article>
 
-          <article class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Storyboard 3" />
-            <div class="card-caption">
-              <h4>Window Scene</h4>
-              <span>Dialogue pacing</span>
+          <article class="storyboard-card" data-images="storyboard-3a.jpg|storyboard-3b.jpg|storyboard-3c.jpg">
+            <button class="storyboard-trigger" type="button">
+              <img src="storyboard-3a.jpg" alt="Storyboard sequence 3" />
+            </button>
+            <div class="storyboard-meta">
+              <h3>Sequence 03</h3>
+              <p>Dialogue scene</p>
             </div>
           </article>
 
-          <article class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Storyboard 4" />
-            <div class="card-caption">
-              <h4>Night Run</h4>
-              <span>Action sequence</span>
-            </div>
-          </article>
-
-          <article class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80" alt="Storyboard 5" />
-            <div class="card-caption">
-              <h4>Coastal Drift</h4>
-              <span>Visual rhythm</span>
-            </div>
-          </article>
-
-          <article class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&q=80" alt="Storyboard 6" />
-            <div class="card-caption">
-              <h4>Arrival</h4>
-              <span>Scene layout</span>
+          <article class="storyboard-card" data-images="storyboard-4a.jpg|storyboard-4b.jpg|storyboard-4c.jpg|storyboard-4d.jpg">
+            <button class="storyboard-trigger" type="button">
+              <img src="storyboard-4a.jpg" alt="Storyboard sequence 4" />
+            </button>
+            <div class="storyboard-meta">
+              <h3>Sequence 04</h3>
+              <p>Final beat</p>
             </div>
           </article>
         </section>
       </main>
     </div>
 
-    <script src="script.js"></script>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close lightbox">Close</button>
+      <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+      <img id="lightbox-image" src="" alt="" />
+      <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+      <div id="lightbox-counter" class="lightbox-counter">1 / 1</div>
+    </div>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const sidebar = document.querySelector(".sidebar");
+
+      if (navToggle && sidebar) {
+        navToggle.addEventListener("click", () => {
+          sidebar.classList.toggle("open");
+          const isOpen = sidebar.classList.contains("open");
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      const closeButton = document.querySelector(".lightbox-close");
+      const prevButton = document.querySelector(".lightbox-prev");
+      const nextButton = document.querySelector(".lightbox-next");
+      const counter = document.getElementById("lightbox-counter");
+
+      let currentImages = [];
+      let currentIndex = 0;
+
+      document.querySelectorAll(".storyboard-trigger").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const card = trigger.closest(".storyboard-card");
+          currentImages = card.dataset.images.split("|");
+          currentIndex = 0;
+          showImage(currentIndex);
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function showImage(index) {
+        currentIndex = index;
+        lightboxImage.src = currentImages[currentIndex];
+        counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+      }
+
+      prevButton.addEventListener("click", () => {
+        if (!currentImages.length) return;
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        showImage(currentIndex);
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (!currentImages.length) return;
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        showImage(currentIndex);
+      });
+
+      closeButton.addEventListener("click", () => {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.src = "";
+        currentImages = [];
+      });
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          lightbox.classList.remove("open");
+          lightbox.setAttribute("aria-hidden", "true");
+          lightboxImage.src = "";
+          currentImages = [];
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("open")) return;
+
+        if (event.key === "Escape") {
+          lightbox.classList.remove("open");
+          lightbox.setAttribute("aria-hidden", "true");
+          lightboxImage.src = "";
+          currentImages = [];
+        }
+
+        if (event.key === "ArrowRight") {
+          nextButton.click();
+        }
+
+        if (event.key === "ArrowLeft") {
+          prevButton.click();
+        }
+      });
+    </script>
   </body>
 </html>

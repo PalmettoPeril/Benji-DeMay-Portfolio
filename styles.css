@@ -696,11 +696,11 @@ button {
   border: none;
   background: rgba(255, 255, 255, 0.12);
   color: white;
-  width: 42px;
+  width: 90px;
   height: 42px;
-  border-radius: 50%;
-  font-size: 2rem;
-  line-height: 1;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -711,6 +711,8 @@ button {
     display: none !important;
   }
 }
+
+
 
 .video-link {
   position: relative;
@@ -789,4 +791,56 @@ button {
   .nav-toggle {
     display: none !important;
   }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+#lightbox,
+.lightbox {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483647 !important;
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(0, 0, 0, 0.82) !important;
+  padding: 2rem !important;
+  box-sizing: border-box !important;
+}
+
+#lightbox.open,
+.lightbox.open {
+  display: flex !important;
+}
+
+#lightbox img,
+.lightbox img {
+  max-width: min(92vw, 1200px) !important;
+  max-height: 90vh !important;
+  object-fit: contain !important;
+  border-radius: 16px !important;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35) !important;
+  background: white !important;
+}
+
+#lightbox .lightbox-close,
+.lightbox-close {
+  position: absolute !important;
+  top: 1.25rem !important;
+  right: 1.5rem !important;
+  border: none !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: white !important;
+  width: 90px !important;
+  height: 42px !important;
+  border-radius: 999px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
 }
