@@ -1,14 +1,14 @@
 :root {
   --bg: #f7f3ef;
   --panel: #f2e9e0;
-  --sidebar: #1f1a1a;
-  --sidebar-text:#1f1a1a;
+  --sidebar: #200f06;
+  --sidebar-text:#200f06;
   --muted: #726763;
   --text: hwb(21 2% 87%);
   --card-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   --border: rgba(29, 27, 26, 0.08);
   --accent: #d5785f;
-  --accent-soft: #1f1a1a;
+  --accent-soft:#200f06;
 }
 
 
@@ -37,11 +37,11 @@ body {
 }
 @media (max-width: 980px) {
   body {
-    background-image: url("https://github.com/PalmettoPeril/Benji-DeMay-Portfolio/blob/main/sketchbg_mobile.webp?raw=true");
+    background-image: url("https://github.com/PalmettoPeril/Benji-DeMay-Portfolio/blob/main/sketchbg_mobile_new.webp?raw=true");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 }
 img {
@@ -66,7 +66,7 @@ button {
 .sidebar-meta a,
 .nav a,
 .brand-block a {
-  color: #1b1414;
+  color: #200f06;
 }
 
 .sidebar-meta a:hover,
@@ -80,7 +80,7 @@ button {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-right: 1px solid rgba(61, 35, 22, 0.15);
-  color: #3d2316;
+  color: #200f06;
 
   padding-top: 2.25rem;
   padding-left: 1.75rem;
@@ -137,7 +137,7 @@ button {
 .nav a,
 .sidebar-meta,
 .sidebar-meta a {
-  color: #3d2316;
+  color: #200f06;
 }
 
 .brand-block p {
@@ -145,17 +145,17 @@ button {
 }
 
 .nav a {
-  color: #3d2316;
+  color: #200f06;
 }
 
 .nav a:hover,
 .nav a.active {
   background: rgba(61, 35, 22, 0.08);
-  color: #3d2316;
+  color: #200f06;
 }
 
 .sidebar-meta a {
-  color: #3d2316;
+  color: #200f06;
 }
 
 .avatar {
@@ -190,7 +190,7 @@ button {
 
 .brand-block p {
   margin: 0.45rem 0 0;
-  color: #3d2316;
+  color: #200f06;
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -206,7 +206,7 @@ button {
 .nav a {
   padding: 0.75rem 0.9rem;
   border-radius: 12px;
-  color: #3d2316;
+  color: #200f06;
   font-weight: 500;
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -221,7 +221,7 @@ button {
   margin-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.2rem;
-  color: #3d2316;
+  color: #200f06;
   font-size: 0.9rem;
 }
 
@@ -230,7 +230,7 @@ button {
 }
 
 .sidebar-meta a {
-  color: #3d2316;
+  color: #200f06;
 }
 
 .content {
